@@ -10,3 +10,4 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r /fastapi_app/requirements.txt
 
 
+

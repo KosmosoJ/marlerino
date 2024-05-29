@@ -18,4 +18,4 @@
 
 Нейминг для сетей - __aff_network_имя_check__
 
-[Схема](https://miro.com/app/board/uXjVKDwXiuI=/) 
+[Схема](https://miro.com/app/board/uXjVKDwXiuI=/?share_link_id=847989392357) 

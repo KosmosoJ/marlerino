@@ -4,9 +4,11 @@ from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv, find_dotenv
 import os
 
-sql_db_path = 'postgresql+asyncpg://postgres:postgres@localhost:5432/foo'
-
-engine = create_async_engine(sql_db_path,echo=True)
+sql_db_path = 'postgresql+asyncpg://postgres:postgres@db:5432/foo'
+try:
+    engine = create_async_engine(sql_db_path,echo=True)
+except Exception:
+    exit('Не удалось создать движок')
 
 async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 Base = declarative_base()
