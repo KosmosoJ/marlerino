@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="menu">
+    <div class="menus-togller">
+        <a href="{{ url_for('root') }}" class="pseudo-button">Пользователь</a>
+        <a href="{{  url_for ('admin_app')}}" class="pseudo-button">Админ</a>
+    </div>
+    
+
+    <div class="menu-container">
+        <span style="text-align:center">Пользователь</span>
+    <div class="menu-ui">
+        <h3>Aff-nets</h3>
+        <div class="btn-group">
+            <button class="btn" id="createAffnet">Create Aff-net</button>
+        </div>
+    </div>
+    <div class="menu-ui">
+        <h3>Offers</h3>
+        <div class="btn-group">
+            <button class="btn" id="createOffer">Create offer</button>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="content-container">
+
+            <!-- <form action="/api/aff_network/" method="post" >
+                
+                Название сети <input type="text" name="aff_net" required>
+                <input type="submit" value="Отправить">
+            </form>
+
+            <form action="/api/aff_network/" method="post" >
+                
+                <label for="offer_name">Название оффера </label>
+                <input type="text" name="offer_name" required>
+
+                <label for="offer_affnet_id">ID сети</label>
+                <input type="number" name="offer_affnet_id"  required>
+
+                <label for="offer_currency">Валюта</label> 
+                <select name="offer_currency" required>
+                    <option disabled selected value> -- Выберите валюту -- </option>
+                    <option value="RUB">RUB</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                </select>
+
+                <label for="offer_value">Вознаграждение</label>
+                <input type="number" name="offer_value"  required>
+
+                <label for="offer_country">Страна</label>
+                <select name="offer_country" required>
+                    <option disabled selected value> -- Выберите страну -- </option>
+                    <option value="RU">Russia</option>
+                    <option value="EU">Europe</option>
+                    <option value="US">USA</option>
+                </select>
+
+                <label for="offer_state">Статус</label>
+                <select name="offer_state" required>
+                    <option disabled selected value> -- Выберите статус -- </option>
+                    <option value="On">Active</option>
+                    <option value="off">Disabled</option>
+                </select>
+
+                <label for="offer_dailycap">Ежедневное ограничение</label>
+                <input type="number" name="offer_dailycap" required>
+
+                <input type="submit" value="Отправить">
+                </form> -->
+            </div>
+            <div class="error_handler"></div>
+
+    </div>
+</div>
+
+    
+</div>
+<script type="module" src="{{ url_for('static', path='/scripts/forms.js') }}"></script>
+
+{% endblock body %}

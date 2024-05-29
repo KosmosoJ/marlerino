@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="menu">
+
+    <div class="menus-togller">
+        <a href="{{ url_for('root') }}" class="pseudo-button">Пользователь</a>
+        <a href="" class="pseudo-button">Админ</a>
+    </div>
+
+    <div class="menu-container">
+        <span style="text-align:center">Админ</span>
+
+    <div class="menu-ui">
+        <h3>Aff-nets</h3>
+        <div class="btn-group">
+            <button class="btn" id="createAffnet">Create Aff-net</button>
+            <button class="btn" id="admin_get_affnets">Get Aff-nets</button>
+            <button class="btn" id="admin_get_affnet">Get Aff-net</button>
+        </div>
+    </div>
+    <div class="menu-ui">
+        <h3>Offers</h3>
+        <div class="btn-group">
+            <button class="btn" id="createOffer">Create offer</button>
+            <button class="btn" id="admin_get_offers">Get Offers</button>
+            <button class="btn" id="admin_get_offer">Get offer</button>
+        </div>
+    </div>
+    <div class="menu-ui">
+        <h3>Keitaro endpoints</h3>
+        <div class="btn-group">
+            <button class="btn api" id="admin_send_affnet">Send Aff_net</button>
+            <button class="btn api" id="admin_send_offer">Send Offer</button>
+            <button class="btn" id="admin_get_keitaro_offers">Get keitaro offers</button>
+            <button class="btn" id="admin_get_keitaro_offer">Get keitaro offer</button>
+            <button class="btn" id="admin_get_keitaro_affnets">Get keitaro Aff_nets</button>
+            <button class="btn" id="admin_get_keitaro_affnet">Get keitaro Aff_net</button>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="content-container">
+            
+        </div>
+        <div class="error_handler"></div>
+
+    </div>
+</div>
+
+<script type="module" src="{{ url_for('static', path='/scripts/admin_forms.js') }}"></script>
+<script type="module" src="{{ url_for('static', path='/scripts/forms.js') }}"></script>
+
+</div>
+{% endblock body %}
